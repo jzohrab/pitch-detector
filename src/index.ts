@@ -65,7 +65,7 @@ Aubio().then(({ Pitch }) => {
   const privacyNotice = document.querySelector('.tuners-privacy-box') as HTMLElement | null;
   if (
     !pitchDetectorEl ||
-    !wheel ||
+    // !wheel ||  // not required
     !freqSpan ||
     !noteSpan ||
     !octaveSpan ||
@@ -137,8 +137,10 @@ Aubio().then(({ Pitch }) => {
           noteSpan.innerText = note.name;
           octaveSpan.innerText = note.octave.toString();
 
-          wheel.style.transition = `transform ${transformTime}ms ease`;
-          wheel.style.transform = `rotate(-${deg}deg)`;
+          if (wheel) {
+            wheel.style.transition = `transform ${transformTime}ms ease`;
+            wheel.style.transform = `rotate(-${deg}deg)`;
+          }
         }
       });
     } catch (err) {
