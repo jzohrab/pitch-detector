@@ -1,1 +1,22 @@
-<html><body><p>blank</p></body></html>
+<html>
+  <head>
+    <script src="vendor/aubiojs/build/aubio.js"></script>
+    <script src="dist/index.js"></script>
+  </head>
+  <body>
+    <div id="pitch-detector">
+      <div id="pitch-freq" class="pitch-text">
+        <p>Hit "Start", play a note, see data below</p>
+        <div id="pitch-freq-text">
+          <div><span class="note">C</span><sub class="octave">3</sub></div>
+          <div><span class="freq"></span><span class="unit">Hz</span></div>
+        </div>
+        <div id="pitch-message-text" class="pitch-text">
+          <span id="circle-text-error"></span>
+        </div>
+        <button id="audio-pause" class="audio-button">Pause</button>
+        <button id="audio-start" class="audio-button">Start</button>
+      </div>
+    </div>
+  </body>
+</html>
