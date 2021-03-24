@@ -5,18 +5,17 @@
   </head>
   <body>
     <div id="pitch-detector">
+      <p style="font-weight: bold;">Hit "Start", play a note, see data below</p>
       <div id="pitch-freq">
-        <p>Hit "Start", play a note, see data below</p>
         <div id="pitch-freq-text">
-          <div><span class="note">C</span><sub class="octave">3</sub></div>
-          <div><span class="freq"></span><span class="unit">Hz</span></div>
+          <p>Note: <span class="note" /></p>
+          <p>Octave: <span class="octave" /></p>
+          <p>Freq: <span class="freq" /> Hz</p>
         </div>
-        <div id="pitch-message-text" class="pitch-text">
-          <span id="circle-text-error"></span>
-        </div>
-        <button id="audio-pause" class="audio-button">Pause</button>
-        <button id="audio-start" class="audio-button">Start</button>
       </div>
+      <p id="circle-text-error"></p>
+      <button id="audio-pause" class="audio-button">Pause</button>
+      <button id="audio-start" class="audio-button">Start</button>
     </div>
   </body>
 </html>
